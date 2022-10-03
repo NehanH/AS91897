@@ -1,3 +1,8 @@
+@font-face {
+        font-family: 'Comfortaa';
+        src: url('Fonts/Comfortaa-Regular.woff') format('woff');
+}
+
 .chevron::before {
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
