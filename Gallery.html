@@ -3,7 +3,7 @@
 <head>
   <title>Basic Scene</title>
   <head>
-		<!-- link to A-Frame +++++++++++++++ -->
+ 	<!-- link to A-Frame +++++++++++++++ -->
 		 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 		<!--Script needed to create the navmesh in the inspector-->  
 		<script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
@@ -12,9 +12,6 @@
 		 <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
 <!--Add in an environment -->
 <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-	
-
-
 </head>
 <body>
   <!--SCENE-->
@@ -22,31 +19,25 @@
 
     <!--ASSETS-->
       <a-assets>
-        <a-asset-item id="myNavMesh" src="navmesh.gltf"></a-asset-item>
-        <img id="wallTexture" src="Images/Marble_Texture.png">
-        <img id="floorTexture" src="Images/Wood_Texture.jpg">
+         <a-asset-item id="myNavMesh" src="wall2.gltf" 
+        <img id="wallTexture" src="Images/Marble_Texture2.jpg">
+        <img id="floorTexture" src="Images/Marble_Texture.jpg">
   </a-assets>
-<a-sky color="#6EBAA7"></a-sky>
     <!--OBSTICALS-->
     <!--FLOOR-->
-    <a-plane id="floor" position="0 0 0" rotation="-90 0 0" src="#floorTexture" scale="40 40 40"></a-plane>
+   	<a-plane id="floor" position="0 0 0" rotation="-90 0 0" src="Images/Wood_Texture.jpg" scale = "20 20 20"></a-plane>
 
-    <a-box material="src:#wallTexture; repeat: 3 3"  id="whitewall" width="0.5" height="6" depth="5" position="-3.4 0.5 14.425"></a-box>
-    <a-box material="src:#wallTexture; repeat: 3 3"  id="whitewall" width="0.5" height="6" depth="5" position="3.4 0.5 14.425"></a-box>
- <a-box color="" id="whitewall-6" width="0.5" height="6" depth="5" position="-8.28932 0.5 11.72361" material="src:#wallTexture; repeat: 3 3"  geometry="" rotation="0 -90 0" scale="1 1 2.057"></a-box>
-<a-box color="" id="whitewall-4" width="0.5" height="6" depth="5" position="8.348 0.5 11.763" material="src:#wallTexture; repeat: 3 3"  geometry="" rotation="0 -90 0" scale="1 1 2.057"></a-box>     
+		<a-plane id="backWall" position="0 1.993 -10.00" depth="0.5" rotation="0 0 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
+    <a-plane id="leftWall" position="-10 1.970 0" depth="0.5" rotation="0 90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
+<a-plane id="rightWall" position="10 2.012 0"  depth="0.5"rotation="0 -90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
+<a-plane id="fontWall" position="0 1.993 10.009" depth="0.5"  rotation="0 180 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
 
-  <a-box color="" id="whitewall-6" width="0.5" height="6" depth="5" position="-13.18806 0.5 -0.84464" material="src:#wallTexture; repeat: 7 5"  geometry="" rotation="0 180 0" scale="1 1 5.11436"></a-box>
 
-<a-box color="" id="whitewall-8" width="0.5" height="6" depth="5" position="13.28818 0.5 -0.84464" material="src:#wallTexture; repeat: 7 5"  geometry="" rotation="0 180 0" scale="1 1 5.11436"></a-box>
-
-<a-box color="" id="whitewall-10" width="0.5" height="6" depth="5" position="0.0478 0.5 -13.43098" material="src:#wallTexture; repeat: 7 5"  geometry="" rotation="0 -90 0" scale="1 1 5.39744"></a-box>
-
-      <a-box color="" id="whitewall-13" width="0.5" height="6" depth="5" position="0.0478 0.5 -7.15844" material="src:#wallTexture; repeat: 3 3" geometry="" rotation="0 -90 0" scale="1 0.98046 2.99249"></a-box>
-       <!-- MESH +++++++++++++++++++++++++-->
-   <a-gltf-model src="#myNavMesh" nav-mesh position="0 -0.2 0"></a-gltf-model>                                                                                          
+		<a-box material="src:#floorTexture; repeat: 7 3" depth="10" width="0.5" height="6" rotation="0 90 0" depth="3" position="0 0.5 -5"></a-box>
+       <!-- MESH +++++++++++++++++++++++++-->  
+      <a-gltf-model src="#myNavMesh" nav-mesh position="0 -0.1 0" visible="false"></a-gltf-model>
     <!-- CAMERA ++++++++++++++++++++++-->
-    <a-entity id="rig" position="0 0.1 18" 
+		   <a-entity id="rig" position="-2.9 0.1 2.2" 
       movement-controls="constrainToNavMesh: true; speed: 0.5;">
       <a-entity camera id="camera" position="0 1.6 0" 
         look-controls="pointerLockEnabled:false"
@@ -55,6 +46,7 @@
       </a-entity>
     </a-entity>
 		
+<a-entity environment="preset: dream; dressingAmount: 500"></a-entity>
 	</a-scene>
 
 
