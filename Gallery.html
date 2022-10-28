@@ -27,17 +27,15 @@
     <!--FLOOR-->
    	<a-plane id="floor" position="0 0 0" rotation="-90 0 0" src="Images/Wood_Texture.jpg" scale = "20 20 20"></a-plane>
 
-		<a-plane id="backWall" position="0 1.993 -10.00" depth="0.5" rotation="0 0 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
-    <a-plane id="leftWall" position="-10 1.970 0" depth="0.5" rotation="0 90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
-<a-plane id="rightWall" position="10 2.012 0"  depth="0.5"rotation="0 -90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
-<a-plane id="fontWall" position="0 1.993 10.009" depth="0.5"  rotation="0 180 0" material="src:#floorTexture; repeat: 7 3" scale = "20 4 1"></a-plane>
+		<a-plane id="backWall" position="0 1.993 -10.00" depth="0.5" rotation="0 0 0" material="src:#floorTexture; repeat: 7 3" scale = "20 8 1"></a-plane>
+    <a-plane id="leftWall" position="-10 1.970 0" depth="0.5" rotation="0 90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 8 1"></a-plane>
+<a-plane id="rightWall" position="10 2.012 0"  depth="0.5"rotation="0 -90 0" material="src:#floorTexture; repeat: 7 3" scale = "20 8 1"></a-plane>
+<a-plane id="fontWall" position="0 1.993 10.009" depth="0.5"  rotation="0 180 0" material="src:#floorTexture; repeat: 7 3" scale = "20 8 1"></a-plane> 
 
-
-		<a-box material="src:#floorTexture; repeat: 7 3" depth="10" width="0.5" height="6" rotation="0 90 0" depth="3" position="0 0.5 -5"></a-box>
-       <!-- MESH +++++++++++++++++++++++++-->  
+        <!-- MESH +++++++++++++++++++++++++-->  
       <a-gltf-model src="#myNavMesh" nav-mesh position="0 -0.1 0" visible="false"></a-gltf-model>
     <!-- CAMERA ++++++++++++++++++++++-->
-		   <a-entity id="rig" position="-2.9 0.1 2.2" 
+		   <a-entity id="rig" position="0 0.1 8.4" 
       movement-controls="constrainToNavMesh: true; speed: 0.5;">
       <a-entity camera id="camera" position="0 1.6 0" 
         look-controls="pointerLockEnabled:false"
@@ -45,7 +43,86 @@
         turnEnabled: true; lookEnabled: true; maxLookAngle: 60;">
       </a-entity>
     </a-entity>
-		
+		     
+<!--TEXT-->
+  <!--START OF TETRIS-->
+    <a-text color="black" value="Name:" position="-9.9 4.913 7.834" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="-9.9 4.500 7.834" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Tetris" position="-9.9 4.913 6.707" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="1984" position="-9.9 4.500 6.707" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="The beauty of Tetris is in its simplicity. Anyone can learn to play the game in minutes. The game has sold millions of copies and remains one of the most popular games to date." position="-9.9 0.9056 7.558" rotation="0 90 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF TETRIS-->
+
+        <!--START OF SMB-->
+    <a-text color="black" value="Name:" position="-9.9 4.913 1.511" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="-9.9 4.500 1.511" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Super Smash Bros" position="-9.9 4.913 0.6" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="1985" position="-9.9 4.500 0.6" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="The game is widely regarded as a revolution in game design with groundbreaking concepts of power-ups, continuously scrolling screens, alternate secret paths, and various environmental physics." position="-9.9       0.9056 1.042" rotation="0 90 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF SMB-->
+        <!--START OF DOOM-->
+    <a-text color="black" value="Name:" position="-9.9 4.913 -4.745" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="-9.9 4.5 -4.745" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="Doom" position="-9.9 4.913 -5.845" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="1993" position="-9.9 4.5 -5.845" rotation="0 90 0" text=""></a-text>
+    <a-text color="black" value="In addition to improved level design that allows players to distinguish one room from another, improved lighting effects and textures, Doom completely revolutionized 3D video games." position="-9.9       0.9056 -5.284" rotation="0 90 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF DOOM-->
+        <!--START OF FFVII-->
+    <a-text color="black" value="Name:" position="-8.243 4.913 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="-8.243 4.5 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Final Fantasy 7" position="-7.251 4.913 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="1997" position="-7.251 4.5 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="By far one of the defining game titles for the original Playstation, Square’s role-playing game Final Fantasy VII was popularised for its expansive universe, loveable characters and immersive story." position="-7.873       0.9056 -9.904" rotation="0 0 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF FFVII-->
+         <!--START OF METAL GEAR-->
+    <a-text color="black" value="Name:" position="-1.543 4.913 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="-1.543 4.5 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Metal Gear Solid" position="-0.5 4.913 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="1998" position="-0.5 4.5 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Metal Gear Solid was revolutionary in the gaming industry due to being a game revolved around stealth. Up till that point the majority of games was all about blasting your way through your enemies but Metal Gear turned that concept on its head." position="-1.3       0.9056 -9.904" rotation="0 0 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF METAL GEAR-->
+         <!--START OF GTA III-->
+    <a-text color="black" value="Name:" position="5.143 4.913 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="5.143 4.5 -9.953" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Grand Theft Auto 3" position="6.1 4.913 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="2001" position="6.1 4.5 -9.904" rotation="0 0 0" text=""></a-text>
+    <a-text color="black" value="Metal Gear Solid was revolutionary in the gaming industry due to being a game revolved around stealth. Up till that point the majority of games was all about blasting your way through your enemies but Metal Gear turned that concept on its head." position="5.5     0.9056 -9.904" rotation="0 0 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF GTA III-->
+           <!--START OF S O C-->
+    <a-text color="black" value="Name:" position="9.937 4.913 -7.3" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="9.937 4.5 -7.3" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Shadow Of The Colossus" position="9.937 4.913 -6.3" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="2001" position="9.937 4.5 -6.3" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Shadow of the colossus was universally loved for its beautiful art direction. The game features a massive open world with immersive story telling which all around makes this PS2 game one of the greatest games in history." position="9.937     0.9056 -7" rotation="0 270 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF S O C-->
+             <!--START OF MINECRAFT-->
+    <a-text color="black" value="Name:" position="9.937 4.913 -1.4" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Date:" position="9.937 4.5 -1.4" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Minecraft" position="9.937 4.913 -0.4" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="2009" position="9.937 4.5 -0.4" rotation="0 270 0" text=""></a-text>
+    <a-text color="black" value="Shadow of the colossus was universally loved for its beautiful art direction. The game features a massive open world with immersive story telling which all around makes this PS2 game one of the greatest games in history." position="9.937     0.9056 -1.2" rotation="0 270 0" text="" scale="0.5 0.5 1"></a-text>
+  <!--END OF MINECRAFT-->
+<!--START OF CSGO-->
+<a-text color="black" value="Name:" position="9.937 4.913 4" rotation="0 270 0"></a-text>
+<a-text color="black" value="Date:         2012" position="9.937 4.5 4" rotation="0 270 0"></a-text>
+<a-text color="black" value="CSGO" position="9.937 4.913 5" rotation="0 270 0"></a-text>
+<a-text color="black" value="CSGO revolutionised competitive shooters, Quickly becoming on the largest e-sports scenes in the world. The game is universally loved for its easy to play nature and gambling market." position="9.937 0.9056 4.6" rotation="0 270 0" scale="0.5 0.5 1"></a-text>
+
+
+ 
+<!--IMAGES-->
+<a-image src="dtech_images/csgo.jpg" position="9.93d7 2.769 5.7" rotation="0 270.000 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/minecraft.png" position="9.937 2.769 0" rotation="0 270.000 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/soc.png" position="9.937 2.769 -5.741" rotation="0 270.000 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/gta3.jpg" position="6.696 2.769 -9.904" rotation="0 0 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/metalgear.png" position="-0.011 2.769 -9.904" rotation="0 0 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/metalgear.png" position="-0.011 2.769 -9.904" rotation="0 0 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/ffvii.jpg" position="-6.696 2.769 -9.904" rotation="0 0 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/doom.jpg" position="-9.9 2.769 -6.209" rotation="0 90 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/smb.png" position="-9.9 2.769 -0.007" rotation="0 90 0" scale="3 3 1"></a-image>
+<a-image src="dtech_images/tetris.png" position="-9.9 2.769 6.339" rotation="0 90 0" scale="3 3 1"></a-image>
+		<a-box material="src:#floorTexture; repeat: 7 3" depth="10" width="0.5" height="6" rotation="0 90 0" depth="3" position="0 0.5 -5"></a-box>
+
 <a-entity environment="preset: dream; dressingAmount: 500"></a-entity>
 	</a-scene>
 
